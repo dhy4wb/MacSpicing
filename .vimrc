@@ -28,6 +28,9 @@ filetype plugin indent on    " required
 
 syntax on
 Plugin 'vim-airline/vim-airline'
+Plugin 'davidhalter/jedi-vim'
+"remove documentation popup
+autocmd FileType python setlocal completeopt-=preview
 
 let g:airline#extensions#tabline#enabled = 1
 
