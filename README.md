@@ -1,4 +1,7 @@
 # vim
+
+Valloric/YouCompleteMet added as a better autocomplete feature for a lot of languages
+
 .vimrc adds in Airline and a lot of helpful things  
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim  
