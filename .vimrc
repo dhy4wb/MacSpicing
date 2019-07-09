@@ -25,20 +25,30 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
-syntax on
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+syntax enable
 Plugin 'vim-airline/vim-airline'
-Plugin 'davidhalter/jedi-vim'
-"remove documentation popup
-autocmd FileType python setlocal completeopt-=preview
+"typescript syntax highlighter plugin
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Valloric/YouCompleteMe'
 
 let g:airline#extensions#tabline#enabled = 1
+"allow full path to be seen in bottom bar for airline
+let g:airline_section_c = '%F'
 
+":e <filename> opens a new buffer in airline
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <C-X> :bdelete<CR>
 nnoremap <C-Y> :w !pbcopy<CR>
 nnoremap <C-P> :r !pbpaste<CR>
 
-set number
-set mouse=a
+"set number
+"set mouse=a
+"sts, ts , and sw are tab lengths
+set sts=2
+set ts=2
+set sw=2
+
+set wildmode=longest,list,full
+set wildmenu
