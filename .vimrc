@@ -12,9 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
+"filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -32,6 +32,14 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'davidhalter/jedi-vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'scrooloose/nerdtree'
+
+"remove documentation popup
+autocmd FileType python setlocal completeopt-=preview
+set ts=2
+set softtabstop=2
 let g:airline#extensions#tabline#enabled = 1
 "allow full path to be seen in bottom bar for airline
 let g:airline_section_c = '%F'
@@ -52,3 +60,7 @@ set sw=2
 
 set wildmode=longest,list,full
 set wildmenu
+autocmd vimenter * NERDTree
+
+set number
+set mouse=a
