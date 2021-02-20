@@ -16,3 +16,6 @@ With visual mode, on default Mac vim, there is no way to copy to clipboard via y
 
 # .gitconfig
 .gitconfig creates dag, which is used to view commit paths with ease
+
+# .zshrc
+Install [oh-my-zsh](https://ohmyz.sh/) and then change the ZSH-THEME to "alanpeabody"
